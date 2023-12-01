@@ -9,7 +9,6 @@ public class grabarAudio : MonoBehaviour {
     void Start() {
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null) {
-            // If AudioSource is not found, add it to the game object
             audioSource = gameObject.AddComponent<AudioSource>();
         }
         foreach (var device in Microphone.devices) {
